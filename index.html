@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+
+   <script src="js/app.js"></script>
+
+<!--
+    <script>
+angular.module('app', ['duScroll']).
+  controller('MyCtrl', function($scope, $document){
+    $scope.toTop = function() {
+      $document.scrollTop(0, 5000);
+    }
+    var a3 = angular.element(document.getElementById('a3'));
+    $scope.toA3 = function() {
+      $document.scrollTo(a3, 30, 1000);
+    }
+  }
+);
+    </script>
+-->
+
+   
+
+</head>
+<body>
+<div ng-controller="MyCtrl">
+<button ng-click="toA3()">toA3</button>
+
+<a href="#top">top</a>
+<div style="height:100px">top</div>
+<a href="#a1">a1</a>
+<div style="height:100px">a1</div>
+<a href="#a2">a2</a>
+<div style="height:100px">a2</div>
+<a id="a3" href="#a3">a3</a>
+<div style="height:100px">a3</div>
+
+<button ng-click="toTop()">toTop</button>
+
+</div>
+</body>
+</html>
